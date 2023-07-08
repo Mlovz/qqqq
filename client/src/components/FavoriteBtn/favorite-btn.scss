@@ -1,0 +1,30 @@
+@use "src/sass/abstracts" as *;
+
+.favorite-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 10;
+  @include flex(center, center);
+  cursor: pointer;
+
+  &.active {
+    animation: anim 0.2s ease-in-out;
+  }
+
+  @keyframes anim {
+    0% {
+      transform: scale(0.7);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+  }
+}
